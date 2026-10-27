@@ -26,6 +26,14 @@
 
 [![Data audit](https://github.com/1998x-stack/shanghai-hpf-research/actions/workflows/ci.yml/badge.svg)](https://github.com/1998x-stack/shanghai-hpf-research/actions/workflows/ci.yml)
 
+## 第二轮跨来源研究（2026-10-27）
+
+新加入[跨来源证据报告](docs/SECOND_PASS_EVIDENCE_2026-10-27.md)：用**上海统计局的房地产交易统计**、**公积金管理中心单位财政预算**和**贷款管理条例**交叉审查贷款需求、信贷资格与管理成本。2025年新房公积金贷款笔数估算同比约-31.58%，但同年新建住宅销售面积同比约-9.71%，**两项不是可直接相除的同一口径**。另发现年报投诉协调率的公布值与直接采用全部投诉件数作分母的结果不同，列为“分母待核实”，不推断造假。
+
+- [跨来源原始数值及单位](data/external/observations_2024_2025.csv)
+- [资金账与财政预算桥接研究](docs/SECOND_PASS_EVIDENCE_2026-10-27.md#2-财政预算与公积金资金账本之间存在一座尚未建立的桥)
+- 复算：`python -c "from hpf_research.external import triangulate; import pprint; pprint.pp(triangulate())"`
+
 ## 首轮发现
 
 1. **资金运行模式发生变化。** 2016年个贷率102.39%，当年贷款余额勾稽必须扣除312.02亿元资产证券化转出；2025年降至65.47%。对比并不直接证明资金闲置或政策失效。

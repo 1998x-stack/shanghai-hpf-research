@@ -1,0 +1,23 @@
+year,metric,value,unit,scope,source_url,interpretation
+2024,new_residential_sales_area,1356.73,10000_m2,Shanghai developer sales,https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html,New commodity residential sales area
+2025,new_residential_sales_area,1224.93,10000_m2,Shanghai developer sales,https://tjj.sh.gov.cn/tjgb/20260330/e0772941e8e041eaaad2df850b44ef98.html,New commodity residential sales area
+2024,existing_property_transfer_area,2072.27,10000_m2,Shanghai existing property registrations,https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html,Not restricted to residential transactions
+2025,existing_property_transfer_area,2384.77,10000_m2,Shanghai existing property registrations,https://tjj.sh.gov.cn/tjgb/20260330/e0772941e8e041eaaad2df850b44ef98.html,Not restricted to residential transactions
+2024,hpf_loan_issued_count,10.90,10000_loans,Shanghai HPF loan originations,https://www.shzfgjj.cn/html/newxxgk/ndbg/227250.html,Rounded to 0.01 ten thousand loans
+2025,hpf_loan_issued_count,9.42,10000_loans,Shanghai HPF loan originations,https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html,Rounded to 0.01 ten thousand loans
+2024,hpf_new_home_loan_share,30.29,percent,Shanghai HPF new loans,https://www.shzfgjj.cn/html/newxxgk/ndbg/227250.html,Percent of loan count and not home sales
+2025,hpf_new_home_loan_share,23.98,percent,Shanghai HPF new loans,https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html,Percent of loan count and not home sales
+2024,hpf_resale_home_loan_share,69.71,percent,Shanghai HPF new loans,https://www.shzfgjj.cn/html/newxxgk/ndbg/227250.html,Percent of loan count
+2025,hpf_resale_home_loan_share,76.02,percent,Shanghai HPF new loans,https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html,Percent of loan count
+2025,hpf_center_total_budget,212355400,CNY,HPF center unit budget,https://zjw.sh.gov.cn/cmsres/12/129c822a555f472dab56ca1a3a0034cf/4c78aa09135eb9058111207f5e65a1ff.pdf,Approved planned budget not annual-report actual
+2025,hpf_center_fiscal_appropriation_budget,204565700,CNY,HPF center unit budget,https://zjw.sh.gov.cn/cmsres/12/129c822a555f472dab56ca1a3a0034cf/4c78aa09135eb9058111207f5e65a1ff.pdf,Planned fiscal appropriation not fund revenue
+2025,hpf_center_other_income_budget,7789700,CNY,HPF center unit budget,https://zjw.sh.gov.cn/cmsres/12/129c822a555f472dab56ca1a3a0034cf/4c78aa09135eb9058111207f5e65a1ff.pdf,Other unit budget income
+2025,hpf_center_employer_hpf_budget,5554200,CNY,HPF center unit budget economic classification 30113,https://zjw.sh.gov.cn/cmsres/12/129c822a555f472dab56ca1a3a0034cf/4c78aa09135eb9058111207f5e65a1ff.pdf,Employer-side staff HPF planned expenditure for this institution only
+2025,hpf_center_performance_pay_budget,71636040,CNY,HPF center unit budget economic classification 30107,https://zjw.sh.gov.cn/cmsres/12/129c822a555f472dab56ca1a3a0034cf/4c78aa09135eb9058111207f5e65a1ff.pdf,Institutional staff performance pay budget not a citywide baseline
+2025,hpf_center_wage_benefits_budget,116220936,CNY,HPF center unit budget economic classification 301,https://zjw.sh.gov.cn/cmsres/12/129c822a555f472dab56ca1a3a0034cf/4c78aa09135eb9058111207f5e65a1ff.pdf,Institutional staff wage benefits budget
+2025,complaints_received,4441,cases,Shanghai HPF enforcement,https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html,Complaints and reports received in year
+2025,complaints_resolved_before_filing,2413,cases,Shanghai HPF enforcement,https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html,Pre-filing coordinated cases
+2025,published_prefiling_resolution_rate,55.86,percent,Shanghai HPF enforcement,https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html,Official ratio definition may use a different denominator
+2025,workers_with_recovered_contributions,4512,persons,Shanghai HPF enforcement,https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html,Enforcement-recovered contributions beneficiaries
+2025,contributions_recovered_by_enforcement,5850.68,10000_CNY,Shanghai HPF enforcement,https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html,Recovered contribution amount
+2025,management_cost_actual_reported,2.08,100m_CNY,HPF annual report management expenditure,https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html,Annual report management costs not unit budget total

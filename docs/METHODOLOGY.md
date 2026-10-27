@@ -31,3 +31,9 @@
 [2015—2025官方年度报告目录](https://www.shzfgjj.cn/html/newxxgk/ndbg/index.html) · [月度业务数据目录](https://www.shzfgjj.cn/html/newxxgk/ywsjtj/index.html) · [2025年报告](https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html)。
 
 原始HTML/PDF文件尚未归档；其SHA-256不应编造或填写。
+
+## 第二轮跨来源统计约束
+
+年度缴存额含汇缴、补缴及结转利息，不应直接当作纯工资缴存；年内实缴人数只要求至少1次汇缴或补缴，不是连续12个月活跃人数。房地产新建住宅销售面积、存量房买卖登记面积与公积金贷款笔数的分母不同，禁止直接相除求“公积金渗透率”。财政单位预算是计划数，公积金年报管理费用是执行数，必须建立口径桥接才允许比较。
+
+见 [第二轮跨来源实证](SECOND_PASS_EVIDENCE_2026-10-27.md)。
