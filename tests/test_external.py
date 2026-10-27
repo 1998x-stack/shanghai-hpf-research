@@ -1,4 +1,3 @@
-from decimal import Decimal
 import pytest
 from hpf_research.external import evidence_rows, triangulate
 

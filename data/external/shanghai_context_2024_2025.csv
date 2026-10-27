@@ -1,0 +1,13 @@
+year,metric,value,unit,source_url,definition_note
+2024,resident_population,2480.26,10000_persons,https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html,Year-end resident population not HPF eligible base
+2025,resident_population,2485.41,10000_persons,https://tjj.sh.gov.cn/tjgb/20260330/e0772941e8e041eaaad2df850b44ef98.html,Year-end resident population not HPF eligible base
+2024,nonlocal_resident_population,983.49,10000_persons,https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html,Non-local household-registration resident population
+2025,nonlocal_resident_population,974.50,10000_persons,https://tjj.sh.gov.cn/tjgb/20260330/e0772941e8e041eaaad2df850b44ef98.html,Non-local household-registration resident population
+2024,new_urban_employment,62.17,10000_persons,https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html,Gross new urban employment not net active HPF contributors
+2025,new_urban_employment,64.10,10000_persons,https://tjj.sh.gov.cn/tjgb/20260330/e0772941e8e041eaaad2df850b44ef98.html,Gross new urban employment not net active HPF contributors
+2024,average_disposable_income,88366,CNY_per_person_year,https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html,All resident per-capita disposable income not employee wage
+2025,average_disposable_income,91987,CNY_per_person_year,https://tjj.sh.gov.cn/tjgb/20260330/e0772941e8e041eaaad2df850b44ef98.html,All resident per-capita disposable income not employee wage
+2024,new_residential_sales_area,1356.73,10000_m2,https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html,Developer new commodity residential sales area
+2025,new_residential_sales_area,1224.93,10000_m2,https://tjj.sh.gov.cn/tjgb/20260330/e0772941e8e041eaaad2df850b44ef98.html,Developer new commodity residential sales area
+2024,existing_property_transfer_area,2072.27,10000_m2,https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html,Existing property registered area includes non-residential
+2025,existing_property_transfer_area,2384.77,10000_m2,https://tjj.sh.gov.cn/tjgb/20260330/e0772941e8e041eaaad2df850b44ef98.html,Existing property registered area includes non-residential

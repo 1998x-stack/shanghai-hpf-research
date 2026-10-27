@@ -15,7 +15,7 @@
 | *China's Housing Provident Fund: Homeownership and Housing Wealth Inequality* (2026; Journal of Real Estate Research) | CHFS，家庭产权与财富 | 报告贷款/产权支持与部分低收入者的住房财富分配改善 | 研究“收入不平等”和“住房财富不平等”的结论可能不同 |
 | *Housing affordability, subsidized lending and cross-city variation* (2019; Housing Studies) | 七城城市面板 | 房价与可负担性影响贷款使用率；房价过高时受益覆盖反而受限 | 在上海控制房价收入比，检验额度上限是否削弱制度可及性 |
 
-文献链接和元数据见 [data/external/literature.csv](../data/external/literature.csv)。
+文献链接和元数据见 [data/external/literature.csv](../data/external/literature.csv)；6条DOI及题名已于2026-10-27经Crossref元数据逐项核对。核对题名不等于复现实证模型；本文仅将原研究结论视为竞争性机制背景。
 
 ## 预先注册的互斥或竞争性机制（待数据验证）
 

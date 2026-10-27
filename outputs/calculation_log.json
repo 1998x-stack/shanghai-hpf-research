@@ -1,0 +1,48 @@
+{
+  "district_month_rows_2022_2025": 768,
+  "2025_withdrawal_growth_100m": "148.740793",
+  "april_september_share_of_2025_withdrawal_growth_pct": "46.74855202634290110312911939",
+  "2024_high_income_loan_vs_contributor_share_ratio": "1.777093596059113300492610837",
+  "bridge": {
+    "2022": {
+      "annual_contribution_100m": "2227.22",
+      "district_collection_100m": "2134.703202",
+      "gap_100m": "92.516798",
+      "contributor_interest_expense_100m": "98.79",
+      "gap_minus_interest_100m": "-6.273202",
+      "annual_withdrawal_100m": "1379.44",
+      "district_withdrawal_100m": "1379.441334",
+      "withdrawal_gap_100m": "-0.001334"
+    },
+    "2023": {
+      "annual_contribution_100m": "2473.1",
+      "district_collection_100m": "2367.550577",
+      "gap_100m": "105.549423",
+      "contributor_interest_expense_100m": "111.77",
+      "gap_minus_interest_100m": "-6.220577",
+      "annual_withdrawal_100m": "1644.51",
+      "district_withdrawal_100m": "1644.512712",
+      "withdrawal_gap_100m": "-0.002712"
+    },
+    "2024": {
+      "annual_contribution_100m": "2594.47",
+      "district_collection_100m": "2476.144212",
+      "gap_100m": "118.325788",
+      "contributor_interest_expense_100m": "125.20",
+      "gap_minus_interest_100m": "-6.874212",
+      "annual_withdrawal_100m": "1693.9",
+      "district_withdrawal_100m": "1693.898004",
+      "withdrawal_gap_100m": "0.001996"
+    },
+    "2025": {
+      "annual_contribution_100m": "2663.65",
+      "district_collection_100m": "2532.044973",
+      "gap_100m": "131.605027",
+      "contributor_interest_expense_100m": "138.15",
+      "gap_minus_interest_100m": "-6.544973",
+      "annual_withdrawal_100m": "1842.64",
+      "district_withdrawal_100m": "1842.638797",
+      "withdrawal_gap_100m": "0.001203"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+year,basis,metric,value_10k_cny,source_url,definition_note
+2024,unit_final_accounts,total_income,20433.32,https://www.shzfgjj.cn/html/newxxgk/czgk/img/20250909090058120.pdf,Institutional unit actual revenue not HPF pool revenue
+2024,unit_final_accounts,fiscal_appropriation_income,20214.11,https://www.shzfgjj.cn/html/newxxgk/czgk/img/20250909090058120.pdf,Institutional budget fiscal appropriation not direct general-revenue subsidy measure
+2024,unit_final_accounts,other_income,219.21,https://www.shzfgjj.cn/html/newxxgk/czgk/img/20250909090058120.pdf,Institutional other income
+2024,unit_final_accounts,total_expenditure,20632.31,https://www.shzfgjj.cn/html/newxxgk/czgk/img/20250909090058120.pdf,Institutional unit expenditure includes use of nonfiscal carryover
+2025,unit_budget,total_income,21235.54,https://zjw.sh.gov.cn/cmsres/12/129c822a555f472dab56ca1a3a0034cf/4c78aa09135eb9058111207f5e65a1ff.pdf,Institutional planned income not actual
+2025,unit_budget,fiscal_appropriation_income,20456.57,https://zjw.sh.gov.cn/cmsres/12/129c822a555f472dab56ca1a3a0034cf/4c78aa09135eb9058111207f5e65a1ff.pdf,Institutional planned fiscal appropriation
+2025,unit_budget,other_income,778.97,https://zjw.sh.gov.cn/cmsres/12/129c822a555f472dab56ca1a3a0034cf/4c78aa09135eb9058111207f5e65a1ff.pdf,Institutional planned other income
+2025,unit_budget,employer_hpf_expenditure,555.42,https://zjw.sh.gov.cn/cmsres/12/129c822a555f472dab56ca1a3a0034cf/4c78aa09135eb9058111207f5e65a1ff.pdf,Institution employee employer-side HPF planned spending only
+2025,unit_final_accounts,total_income,21348.58,https://www.shanghai.gov.cn/cmsres/52/52d88d876d064813879ac4857aac2622/c6eed1e7413a568828be064eaee52710.pdf,Actual unit income not fund pool revenue
+2025,unit_final_accounts,fiscal_appropriation_income,20782.57,https://www.shanghai.gov.cn/cmsres/52/52d88d876d064813879ac4857aac2622/c6eed1e7413a568828be064eaee52710.pdf,Actual unit fiscal appropriation; possible same transfer chain as management fee
+2025,unit_final_accounts,other_income,566.01,https://www.shanghai.gov.cn/cmsres/52/52d88d876d064813879ac4857aac2622/c6eed1e7413a568828be064eaee52710.pdf,Actual unit other income
+2025,unit_final_accounts,total_expenditure,21551.31,https://www.shanghai.gov.cn/cmsres/52/52d88d876d064813879ac4857aac2622/c6eed1e7413a568828be064eaee52710.pdf,Actual unit spending includes nonfiscal carryover
+2025,unit_final_accounts,employer_hpf_expenditure,556.73,https://www.shanghai.gov.cn/cmsres/52/52d88d876d064813879ac4857aac2622/c6eed1e7413a568828be064eaee52710.pdf,Institution employee employer-side HPF actual spending only
+2025,unit_final_accounts,performance_pay,7004.25,https://www.shanghai.gov.cn/cmsres/52/52d88d876d064813879ac4857aac2622/c6eed1e7413a568828be064eaee52710.pdf,Institution staff performance pay actual spending only

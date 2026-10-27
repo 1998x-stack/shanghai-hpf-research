@@ -13,6 +13,7 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "ruff>=0.6"]
+analysis = ["openpyxl>=3.1", "matplotlib>=3.8"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

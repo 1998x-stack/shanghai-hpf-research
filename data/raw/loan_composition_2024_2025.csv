@@ -1,0 +1,9 @@
+year,category,reported_share_pct,denominator,source_url,definition_note
+2024,new_home,30.29,new_loan_count,https://www.shzfgjj.cn/html/newxxgk/ndbg/227250.html,Share of loan count rounded to 0.01 percentage point
+2024,resale_home,69.71,new_loan_count,https://www.shzfgjj.cn/html/newxxgk/ndbg/227250.html,Share of loan count rounded to 0.01 percentage point
+2024,first_home,88.94,new_loan_count,https://www.shzfgjj.cn/html/newxxgk/ndbg/227250.html,Share of loan count rounded to 0.01 percentage point
+2024,second_or_more_home,11.06,new_loan_count,https://www.shzfgjj.cn/html/newxxgk/ndbg/227250.html,Share of loan count rounded to 0.01 percentage point
+2025,new_home,23.98,new_loan_count,https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html,Share of loan count rounded to 0.01 percentage point
+2025,resale_home,76.02,new_loan_count,https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html,Share of loan count rounded to 0.01 percentage point
+2025,first_home,86.79,new_loan_count,https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html,Share of loan count rounded to 0.01 percentage point
+2025,second_or_more_home,13.21,new_loan_count,https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html,Share of loan count rounded to 0.01 percentage point
