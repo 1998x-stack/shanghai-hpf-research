@@ -22,6 +22,10 @@
 
 数据来源：[上海市住房公积金2025年年度报告](https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html)。历史各年原始链接见 [sources/manifest.csv](sources/manifest.csv)。
 
+![2015—2025年上海住房公积金个贷率](assets/loan_ratio.svg)
+
+[![Data audit](https://github.com/1998x-stack/shanghai-hpf-research/actions/workflows/ci.yml/badge.svg)](https://github.com/1998x-stack/shanghai-hpf-research/actions/workflows/ci.yml)
+
 ## 首轮发现
 
 1. **资金运行模式发生变化。** 2016年个贷率102.39%，当年贷款余额勾稽必须扣除312.02亿元资产证券化转出；2025年降至65.47%。对比并不直接证明资金闲置或政策失效。
