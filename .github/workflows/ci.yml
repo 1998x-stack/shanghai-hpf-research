@@ -21,6 +21,10 @@ jobs:
         run: |
           python analysis/scripts/build_outputs.py
           git diff --exit-code -- data/processed outputs/calculation_log.json
+      - name: Rebuild seasonal district and annual findings
+        run: |
+          python -m hpf_research.seasonality --write
+          git diff --exit-code -- data/processed/repayment_seasonality_*.csv
       - name: Run tests
         run: python -m pytest -q
       - name: Validate workbook formulas, inputs and parameter provenance
