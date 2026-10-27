@@ -25,3 +25,15 @@ jobs:
         run: python -m pytest -q
       - name: Validate workbook formulas, inputs and parameter provenance
         run: python -m pytest -q tests/test_artifacts.py
+      - name: Publish validated reproducible artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: shanghai-hpf-validated-research
+          path: |
+            outputs/shanghai_hpf_research.xlsx
+            outputs/calculation_log.json
+            outputs/figures/*.png
+            data/processed/*.csv
+            config/analysis_scenarios.json
+          if-no-files-found: error
+          retention-days: 30

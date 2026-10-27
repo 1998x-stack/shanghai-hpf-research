@@ -1,0 +1,8 @@
+id,topic,requested_aggregate,dimensions,grain,period,privacy_basis,source_status,analysis_decision
+A01,employer benefit,employer_basic_and_supplementary_payment_total,unit_type x wage_bracket,annual,2024-2025,Nonidentifying grouped cells and minimum count policy,not_obtained,Employer contribution distribution
+A02,participation,active_contributors_and_credited_accounts,unit_type x employment_status,annual,2022-2025,Aggregate counts with privacy-threshold suppression,not_obtained,Separate annual contributor flows from June credited accounts
+A03,loan selection,eligible_households_applications_approvals_disbursed,unit_type x income_bracket x housing_type,annual,2024-2025,Suppress small grouped cells; no household identifiers,not_obtained,Loan access funnel and selection bias
+A04,withdrawal,withdrawal_amount_by_cause_month,rent x mortgage_repayment x retirement x others,monthly,2022-2025,Citywide summarized sums only,not_obtained,Monthly April September seasonality decomposition
+A05,accounting,annual_contribution_to_district_collection_reconciliation,remittance x retroactive x credited_interest x other,annual,2022-2025,Existing accounting schedules only,not_obtained,Accounting bridge with nonzero residual
+A06,fiscal,transfers_of_management_fees_to_budget,source x destination x fiscal_year,annual,2024-2025,Already-held aggregate receipts/approvals,not_obtained,Institution budget vs fund income separation
+A07,asset_liability,restricted_cash_and_asset_maturity_ladder,maturity_bucket,monthly,2024-2025,Financial aggregate only,not_obtained,1-90 day liquidity scenario with actual cash ladders

@@ -24,12 +24,16 @@
 
 **风险与治理。** 2021—2025年风险准备金计提约为当年公积金业务增值收益的80%。2024及2025年机构决算和2025年预算已归档；两年财政拨款额与年报管理费上缴额在年报舍入范围内接近，符合管理费经财政上缴再拨付的制度路径，但仍需交易台账逐笔核销。2026年修订条例[单独比较](policies/legal_comparison.md)，不追溯用于2025年。
 
+## 最新可验证交付
+
+[GitHub Actions](https://github.com/1998x-stack/shanghai-hpf-research/actions/workflows/ci.yml) 每次构建运行99项年度原始字段、768条区月表、CSV/JSON重建差异和Excel语义测试。**CI下载包** `shanghai-hpf-validated-research` 包含由当前代码即时重建的Excel、数据、计算日志及图表，保留30天；仓库提交的历史Excel是发布快照，不保证包含其后最新计算公式。获取时请以与对应提交SHA匹配的CI产物为准。
+
 ## 研究交付
 
 - [完整研究报告](reports/full_research_report.md) · [摘要](reports/executive_summary.md) · [证据等级](reports/findings_and_evidence.md) · [当前局限](reports/limitations.md)
 - [四年16区月度面板分析](reports/longitudinal_panel_2022_2025.md) · [2025年逐月复核](reports/monthly_panel_2025.md)
 - [Excel工作簿](outputs/shanghai_hpf_research.xlsx)：年度、区月原值、公式计算、财政账、群体构成、敏感性、来源与缺失清单
-- [原始来源台账](sources/manifest.csv)：79份原件的机构、网址、发布日期、期间、获取日、版本和SHA-256；原始文件见 [`sources/original/`](sources/original/)
+- [原始来源台账](sources/manifest.csv)：79份原件的机构、网址、发布日期、期间、获取日、版本和SHA-256；原始文件见 [`sources/original/`](sources/original/)；另4份6月结息公告仅有官方URL和已核对数值，尚无原始HTML快照
 - [数据缺口登记](data/processed/data_gaps.csv) · [信息公开申请草案](reports/information_requests.md)（未提交）
 - [资金比率图](outputs/figures/loan_ratio_2015_2025.png) · [月度提取季节性图](outputs/figures/withdrawal_seasonality_2023_2025.png)
 
