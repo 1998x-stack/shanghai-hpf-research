@@ -1,0 +1,5 @@
+year,districts_with_strict_april_september_top_two,district_count,annual_withdrawals_100m,april_september_withdrawals_100m,batch_withdrawals_share_pct,batch_collection_share_pct,batch_withdrawals_share_without_huangpu_pct,huangpu_annual_withdrawals_share_pct,district_withdrawals_hhi,identification_status
+2022,16,16,1379.441334,319.488139,23.160691,15.249370,23.667183,30.041106,0.147696,descriptive_consistent_with_annual_repayment_rules
+2023,16,16,1644.512712,420.202577,25.551799,16.653142,26.492582,31.105879,0.152830,descriptive_consistent_with_annual_repayment_rules
+2024,16,16,1693.898004,443.694506,26.193697,16.932269,27.033275,31.516708,0.155958,descriptive_consistent_with_annual_repayment_rules
+2025,16,16,1842.638797,513.228673,27.852918,17.000749,28.820113,31.237499,0.154993,descriptive_consistent_with_annual_repayment_rules
