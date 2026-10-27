@@ -175,6 +175,8 @@ def build_workbook(data: dict) -> None:
         ws.cell(i, 9, f"=C{i}*D{i}/100")
 
     for name, path in [
+        ("RepaymentSeasonality", "data/processed/repayment_seasonality_yearly_2022_2025.csv"),
+        ("DistrictSeasonality", "data/processed/repayment_seasonality_district_2022_2025.csv"),
         ("IncomeGroups", "data/raw/income_composition_2024.csv"),
         ("LoanMix", "data/raw/loan_composition_2024_2025.csv"),
         ("ContributorGroups", "data/raw/contributor_composition.csv"),

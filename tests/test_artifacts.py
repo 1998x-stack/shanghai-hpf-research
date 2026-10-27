@@ -91,4 +91,7 @@ def test_loaded_workbook_has_source_data_and_formula_sheets():
     assert book["DistrictRaw"].max_row == 769
     assert book["AnnualRaw"].max_row == 12
     assert book["DistrictBridge"]["L5"].data_type == "f"
+    assert book["RepaymentSeasonality"].max_row == 5
+    assert book["DistrictSeasonality"].max_row == 65
+    assert book["RepaymentSeasonality"]["B5"].value == 16
     book.close()
