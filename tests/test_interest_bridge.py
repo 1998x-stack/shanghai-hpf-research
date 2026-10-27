@@ -29,3 +29,15 @@ def test_no_improper_dormant_person_count_is_inferred():
 def test_residual_is_reported_not_forced_to_zero():
     assert all(Decimal(r["gap_minus_settled_interest_100m"]) != 0
                for r in settlement_bridge())
+
+
+def test_settlement_manifest_is_schema_complete():
+    from hpf_research.audit import records
+    rows = records("sources/manifest.csv")
+    selected = [r for r in rows if r["id"].startswith("SETTLEMENT-")]
+    assert len(selected) == 4
+    for row in selected:
+        assert None not in row
+        assert all(row[k] for k in ("publication_date", "period", "retrieved_date",
+                                    "version_note", "topic", "review_status",
+                                    "snapshot_status", "original_sha256"))
