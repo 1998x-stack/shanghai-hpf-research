@@ -24,7 +24,7 @@ def read(path: str) -> list[dict[str, str]]:
 def write(path: Path, rows: list[dict], fields: list[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fields)
+        writer = csv.DictWriter(f, fields, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
