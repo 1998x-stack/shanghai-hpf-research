@@ -38,12 +38,20 @@
 ```bash
 python -m pip install -e '.[dev,analysis]'
 python -m hpf_research.audit
-python analysis/scripts/verify_annual_sources.py
+python -m hpf_research.source_validation --check all
+python -m hpf_research.interest_bridge
 python analysis/scripts/build_outputs.py
 python -m pytest -q
 ```
 
-重新抓取官方月报：`python -m hpf_research.collect_monthly --year 2024`，可选2022、2023、2024、2025。现有数据和图表可离线复算；重采会读取当前官网版本，须先保留旧快照并比对散列。[方法与口径](docs/METHODOLOGY.md)说明原始值、年度流量、期末存量、年内累计、月度差分与不同人群分母。
+重新抓取官方月报：`python -m hpf_research.collect_monthly --year 2024`，可选2022、2023、2024、2025。现有数据和图表可离线复算；重采会读取当前官网版本；若来源变更或产生不同CSV，脚本默认拒绝覆盖旧快照，须先人工保存版本并复核。[方法与口径](docs/METHODOLOGY.md)说明原始值、年度流量、期末存量、年内累计、月度差分与不同人群分母。
+
+## 可复现数据契约
+
+- 年报原件业务章节内提取9项字段×11年=99项，逐字段比对；区月表48份×16区=768行，从归档原HTML独立复解析。
+- 来源台账逐行检查12列Schema、SHA-256（仅已归档文件）、URL与状态；故意修改核心数字、单位、区域名和日期的测试应失败。
+- 场景假设保存在 [`config/analysis_scenarios.json`](config/analysis_scenarios.json)，历史证券化调整保存在 [`data/raw/loan_adjustments_2015_2025.csv`](data/raw/loan_adjustments_2015_2025.csv)，不得将假设参数称为实际政策效果。
+- CI重建派生CSV/JSON并对照Git已提交文件；Excel和图片做语义/结构测试，不以二进制字节相等作为必要条件。
 
 ## 研究边界
 

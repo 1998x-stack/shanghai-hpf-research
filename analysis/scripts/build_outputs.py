@@ -83,11 +83,15 @@ def build_data() -> tuple[dict, dict]:
     w2025 = {int(r["month"]): d(r["withdrawal_flow_100m"]) for r in city_rows if r["year"] == 2025}
     annual_growth = sum(w2025.values()) - sum(w2024.values())
     autumn_spring_growth = sum(w2025[m] - w2024[m] for m in (4, 9))
+    income = {(int(r["year"]), r["population"]): d(r["high_income_share_pct"])
+              for r in read("data/raw/income_composition_2024.csv")}
+    high_income_ratio = (income[(2024, "new_loan_borrowers")]
+                         / income[(2024, "annual_active_contributors")])
     summary = {
         "district_month_rows_2022_2025": sum(len(v) for v in monthly.values()),
         "2025_withdrawal_growth_100m": str(annual_growth),
         "april_september_share_of_2025_withdrawal_growth_pct": str(100 * autumn_spring_growth / annual_growth),
-        "2024_high_income_loan_vs_contributor_share_ratio": str(Decimal("14.43") / Decimal("8.12")),
+        "2024_high_income_loan_vs_contributor_share_ratio": str(high_income_ratio),
         "bridge": {str(r["year"]): {k: str(v) for k, v in r.items() if k.endswith("_100m")}
                    for r in bridge_rows},
     }
@@ -192,20 +196,24 @@ def build_workbook(data: dict) -> None:
     ws = book["LoanMix"]
     ws.cell(1, 7, "estimated_count_10k_formula")
     for i in range(2, ws.max_row + 1):
-        count = "10.90" if ws.cell(i, 1).value == 2024 else "9.42"
-        ws.cell(i, 7, f"={count}*C{i}/100")
+        year = int(ws.cell(i, 1).value)
+        if year not in data["annual"]:
+            raise ValueError(f"LoanMix unknown source year {year}")
+        annual_row = sorted(data["annual"]).index(year) + 2
+        ws.cell(i, 7, f"=AnnualRaw!J{annual_row}*C{i}/100")
 
+    center = {(int(r["year"]), r["basis"], r["metric"]): d(r["value_10k_cny"])
+              for r in read("data/raw/center_fiscal_2024_2025.csv")}
+    management = {(int(r["year"]), r["metric"]): d(r["amount_100m"])
+                  for r in read("data/raw/financial_items_2024_2025.csv")}
     fiscal = [
-        {"year": 2024, "reported_management_fee_100m": 2.02,
-         "actual_fiscal_appropriation_10k": 20214.11,
+        {"year": year, "reported_management_fee_100m": management[(year, "management_fee_assigned")],
+         "actual_fiscal_appropriation_10k": center[(year, "unit_final_accounts",
+                                                      "fiscal_appropriation_income")],
          "rounded_fee_10k_formula": "", "difference_10k_formula": "",
          "rounding_half_unit_10k": 50,
-         "status": "amounts compatible with common transfer route; transactions not reconciled"},
-        {"year": 2025, "reported_management_fee_100m": 2.08,
-         "actual_fiscal_appropriation_10k": 20782.57,
-         "rounded_fee_10k_formula": "", "difference_10k_formula": "",
-         "rounding_half_unit_10k": 50,
-         "status": "amounts compatible with common transfer route; transactions not reconciled"},
+         "status": "amounts compatible with common transfer route; transactions not reconciled"}
+        for year in (2024, 2025)
     ]
     sheet("FiscalBridge", fiscal)
     ws = book["FiscalBridge"]
@@ -213,10 +221,12 @@ def build_workbook(data: dict) -> None:
         ws.cell(i, 4, f"=B{i}*10000")
         ws.cell(i, 5, f"=C{i}-D{i}")
 
+    config = json.loads((ROOT / "config/analysis_scenarios.json").read_text(encoding="utf-8"))
+    model = config["loan_interest_comparison"]
     scenarios = []
-    for commercial_rate in (0.031, 0.035, 0.04):
-        scenarios.append({"principal_cny": 1_000_000, "hpf_rate": 0.026,
-                          "commercial_rate": commercial_rate, "months": 360,
+    for commercial_rate in model["commercial_rates"]:
+        scenarios.append({"principal_cny": model["principal_cny"], "hpf_rate": model["hpf_rate"],
+                          "commercial_rate": commercial_rate, "months": model["months"],
                           "hpf_payment_formula": "", "commercial_payment_formula": "",
                           "nominal_saving_formula": "", "present_value_formula": "",
                           "status": "hypothetical matched-risk commercial rate; no observed subsidy total"})
@@ -229,11 +239,13 @@ def build_workbook(data: dict) -> None:
         ws.cell(i, 8, f"=(F{i}-E{i})*(1-(1+C{i}/12)^(-D{i}))/(C{i}/12)")
 
     liquidity = [
-        {"annual_withdrawals_100m": 1842.64, "shock_pct": shock,
-         "year_end_deposits_100m": 3287.72, "incremental_withdrawal_formula": "",
+        {"annual_withdrawals_100m": d(data["annual"][2025]["withdrawals_100m"]),
+         "shock_pct": shock,
+         "year_end_deposits_100m": management[(2025, "deposit_balance")],
+         "incremental_withdrawal_formula": "",
          "share_of_year_end_deposits_formula": "",
          "limitation": "Illustrative annual shock; not a 1-90 day liquidity test"}
-        for shock in (20, 50)
+        for shock in config["liquidity"]["incremental_annual_withdrawal_shocks_pct"]
     ]
     sheet("LiquiditySensitivity", liquidity)
     ws = book["LiquiditySensitivity"]

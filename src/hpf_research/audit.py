@@ -9,7 +9,19 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 Y = Decimal("0.01")
 ROUNDING_TOLERANCE = Decimal("0.021")
-SECURITIZATION_TRANSFER_2016 = Decimal("312.02")
+def disclosed_loan_adjustments() -> dict[int, Decimal]:
+    # Only adjustments explicitly shown in the source ledger are applied.
+    rows = records("data/raw/loan_adjustments_2015_2025.csv")
+    adjustments: dict[int, Decimal] = {}
+    for row in rows:
+        year = int(row["year"])
+        amount = Decimal(row["amount_100m"])
+        if row["type"] != "securitization_outflow" or not row["source_url"].startswith("https://"):
+            raise ValueError("Unsupported or unproven loan adjustment")
+        if year in adjustments:
+            raise ValueError("Duplicate annual loan adjustment")
+        adjustments[year] = amount
+    return adjustments
 
 
 def records(relative_path: str) -> list[dict[str, str]]:
@@ -27,13 +39,14 @@ def reconcile() -> dict:
     if sorted(annual) != list(range(2015, 2026)):
         raise ValueError("Annual coverage is incomplete")
     rows = []
+    adjustments = disclosed_loan_adjustments()
     for year in range(2016, 2026):
         now, prev = annual[year], annual[year - 1]
         fund_delta = (value(now, "fund_balance_100m")
                       - value(prev, "fund_balance_100m")
                       - value(now, "contributions_100m")
                       + value(now, "withdrawals_100m"))
-        transfer = SECURITIZATION_TRANSFER_2016 if year == 2016 else Decimal(0)
+        transfer = adjustments.get(year, Decimal(0))
         loan_delta = (value(now, "loan_balance_100m")
                       - value(prev, "loan_balance_100m")
                       - value(now, "loan_issued_100m")

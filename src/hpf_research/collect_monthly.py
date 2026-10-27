@@ -104,6 +104,20 @@ def main() -> None:
 
     snapshot_dir = ROOT / f"sources/original/monthly_{year}"
     snapshot_dir.mkdir(parents=True, exist_ok=True)
+    # Never silently overwrite previously archived evidence. Official webpages can change:
+    # preserving changed snapshots and manual review takes precedence over convenience.
+    for month, page_id, raw, url in pages:
+        archive = snapshot_dir / f"{month:02d}_{page_id}.html"
+        if archive.is_file() and archive.read_bytes() != raw:
+            raise ValueError(f"Publisher source changed: {url}. Preserve the existing "
+                             f"snapshot in a dated revision and reconcile before importing.")
+    existing_csv = ROOT / f"data/processed/district_monthly_{year}_coverage.csv"
+    if existing_csv.exists():
+        with existing_csv.open(encoding="utf-8-sig", newline="") as stream:
+            existing_rows = list(csv.DictReader(stream))
+        if existing_rows != rows:
+            raise ValueError(f"{year} collected records differ from committed CSV; "
+                             "perform an explicit source-version reconciliation")
     provenance = []
     for month, page_id, raw, url in pages:
         name = f"{month:02d}_{page_id}.html"
