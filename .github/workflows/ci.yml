@@ -1,0 +1,19 @@
+name: Research data validation
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install research package
+        run: python -m pip install -e ".[dev]"
+      - name: Reconcile source figures
+        run: python -m hpf_research.audit
+      - name: Run tests
+        run: python -m pytest -q

@@ -1,0 +1,6 @@
+table,field,unit,definition
+annual_2015_2025.csv,contributors_10k,万人,年度实缴人数非期末职工数
+annual_2015_2025.csv,fund_balance_100m,亿元,期末缴存余额
+annual_2015_2025.csv,loan_balance_100m,亿元,期末个人住房贷款余额
+district_monthly_2025_coverage.csv,year_to_date_collection_10k_cny,万元,年初至当月累计
+district_monthly_2025_coverage.csv,contributors_10k,万人,当月统计截面实缴人数
